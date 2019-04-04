@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service'
 
 @Component({
   selector: 'app-goods',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoodsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private config: ConfigService) { }
+  goodsPage = { };
   ngOnInit() {
+    this.goodsPage = this.getGoods();
   }
-
+  getGoods(){
+    return this.config.getConfig().goodsPage
+  }
 }

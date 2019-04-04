@@ -1,74 +1,11 @@
 <section class="goods">
-  <div class="good">
-    <img src="/assets/img/img-1.png" alt="">
-    <h1>Обои</h1>
-    <p>Артикул</p>
-    <p>Бренд <b>Fromental</b></p>
-    <p><b>Цена:1500</b></p>
+  <div *ngFor = "let goods of goodsPage.goods" class="good">
+    <img src="{{goods.img}}" alt="">
+    <h1>{{goods.name}}</h1>
+    <p>{{goods.article}}</p>
+    <p>Бренд <b>{{goods.brand}}</b></p>
+    <p><b>Цена:{{goods.price}}</b></p>
     <a href="#">Заказать</a>
   </div>
-  <div class="good">
-      <img src="/assets/img/img-2.png" alt="">
-    <h1>Обои</h1>
-    <p>Артикул</p>
-    <p>Бренд <b>Fromental</b></p>
-    <p><b>Цена:1500</b></p>
-    <a href="#">Заказать</a>
-  </div>
-  <div class="good">
-      <img src="/assets/img/img-3.png" alt="">
-    <h1>Обои</h1>
-    <p>Артикул</p>
-    <p>Бренд <b>Fromental</b></p>
-    <p><b>Цена:1500</b></p>
-    <a href="#">Заказать</a>
-  </div>
-  <div class="good">
-      <img src="/assets/img/img-1.png" alt="">
-      <h1>Обои</h1>
-      <p>Артикул</p>
-      <p>Бренд <b>Fromental</b></p>
-      <p><b>Цена:1500</b></p>
-      <a href="#">Заказать</a>
-    </div>
-    <div class="good">
-        <img src="/assets/img/img-2.png" alt="">
-      <h1>Обои</h1>
-      <p>Артикул</p>
-      <p>Бренд <b>Fromental</b></p>
-      <p><b>Цена:1500</b></p>
-      <a href="#">Заказать</a>
-    </div>
-    <div class="good">
-        <img src="/assets/img/img-3.png" alt="">
-      <h1>Обои</h1>
-      <p>Артикул</p>
-      <p>Бренд <b>Fromental</b></p>
-      <p><b>Цена:1500</b></p>
-      <a href="#">Заказать</a>
-    </div>
-    <div class="good">
-        <img src="/assets/img/img-1.png" alt="">
-        <h1>Обои</h1>
-        <p>Артикул</p>
-        <p>Бренд <b>Fromental</b></p>
-        <p><b>Цена:1500</b></p>
-        <a href="#">Заказать</a>
-      </div>
-      <div class="good">
-          <img src="/assets/img/img-2.png" alt="">
-        <h1>Обои</h1>
-        <p>Артикул</p>
-        <p>Бренд <b>Fromental</b></p>
-        <p><b>Цена:1500</b></p>
-        <a href="#">Заказать</a>
-      </div>
-      <div class="good">
-          <img src="/assets/img/img-3.png" alt="">
-        <h1>Обои</h1>
-        <p>Артикул</p>
-        <p>Бренд <b>Fromental</b></p>
-        <p><b>Цена:1500</b></p>
-        <a href="#">Заказать</a>
-      </div>
+  
 </section>
