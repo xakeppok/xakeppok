@@ -1,17 +1,20 @@
 export const configurtaion = {
    goodsPage:{
       goods: [
-         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'},
-         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500'}
+         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1400', img_short: '/assets/img/img-1-short.png', amount: '1'},
+         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1300', img_short: '/assets/img/img-2-short.png', amount: '1'},
+         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1200', img_short: '/assets/img/img-3-short.png', amount: '1'},
+         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1500', img_short: '/assets/img/img-1-short.png', amount: '1'},
+         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1600', img_short: '/assets/img/img-2-short.png', amount: '1'},
+         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1700', img_short: '/assets/img/img-3-short.png', amount: '1'},
+         {img: '/assets/img/img-1.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1800', img_short: '/assets/img/img-1-short.png', amount: '1'},
+         {img: '/assets/img/img-2.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1900', img_short: '/assets/img/img-2-short.png', amount: '1'},
+         {img: '/assets/img/img-3.png', name: 'Обои', article: 'Артикул', brand: 'Fromental', price: '1510', img_short: '/assets/img/img-3-short.png', amount: '1'}
       ]
    },
+   cart: [
+      
+   ],
    footerInfo:{
       h1: 'Интернет магазин отделки и декора интерьеров ',
       span: 'GLUTS.RU',
