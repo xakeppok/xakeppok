@@ -7,16 +7,27 @@ import { ConfigService } from '../config.service'
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-
+  visibility: boolean = true
   constructor(private config: ConfigService) { }
     cart = []
   ngOnInit() {
     this.cart = this.getCart();
   }
+  toogle(){
+    this.visibility = !this.visibility;
+  }
   deleteCart(index:number){
     this.cart.splice(index, 1);
   }
-  
+   orderSum(){
+    let sum:number = 0
+    for(let i = 0; i < this.cart.length; i++){
+      if(this.cart[i].amount > 0){
+        sum += +this.cartSum(i)
+      }
+    }
+    return sum
+  }
   cartSum(index:number){
     return this.cart[index].amount * this.cart[index].price
   }

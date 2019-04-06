@@ -16,7 +16,11 @@ export class GoodsComponent implements OnInit {
     this.cart = this.getCart();
   }
   pushInToCart(index:number){
-    this.cart.push(this.goodsPage.goods[index]);
+    this.goodsPage.goods[index].amount++
+    if(this.goodsPage.goods[index].amount>1){
+      return
+    }
+    this.cart.push(this.goodsPage.goods[index])
   }
   getGoods(){
     return this.config.getConfig().goodsPage
