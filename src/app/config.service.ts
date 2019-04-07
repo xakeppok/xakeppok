@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfigService {
-
+  public zalupa: boolean = true;
   private config: IConfiguration = configurtaion;
   public liveSearch: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
