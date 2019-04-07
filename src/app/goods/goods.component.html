@@ -1,5 +1,5 @@
 <section class="goods">
-  <div *ngFor = "let goods of goodsPage.goods; let i = index" class="good">
+  <div *ngFor = "let goods of goodsPage.goods | filter: [currValue]; let i = index" class="good">
     <img src="{{goods.img}}" alt="">
     <h1>{{goods.name}}</h1>
     <p>{{goods.article}}</p>

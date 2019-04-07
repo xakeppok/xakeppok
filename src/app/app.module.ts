@@ -7,6 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { GoodsComponent } from './goods/goods.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConfigService } from './config.service';
+import { DataService } from './api/data.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,10 +19,16 @@ import { ConfigService } from './config.service';
     HeaderComponent,
     GoodsComponent,
     FooterComponent,
+    FilterPipe,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      DataService, {dataEncapsulation: false}
+    )
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

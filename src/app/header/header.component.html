@@ -1,23 +1,25 @@
 <header class="header">
-    <div class="header_logo"></div>
-    <div class="header_search">
-      <form action="">
-      <input type="search" placeholder="Более 1000 товаров">
-      <button type="submit"><i class="fas fa-search"></i></button>
-      
-    </form>
-    </div>
-    <div class="header_basket">
-      <button (click) = "toogle()">Корзина<span class="color_basket">({{cart.length}})</span></button>
-      <div [ngClass]="{'invisible_cart': visibility}" class="cart">
-        <div class="order" *ngFor = "let cart of cart; let i = index">
-          <img src={{cart.img_short}} alt="">
-          <h1>{{cart.brand}}</h1>
-          <p><button (click) = cartAmontMinus(i)>-</button> {{cartAmount(i)}}<button (click) = cartAmontPlus(i)>+</button></p>
-          <p>Цена: {{cartSum(i)}}</p>
-          <button (click)="deleteCart(i)">Удалить из корзины</button>       
-        </div>
-        <p *ngIf="cart.length > 0">Итого:{{orderSum()}} грн</p>
+  <div class="header_logo"></div>
+  <div class="header_search">
+    <input (input)="liveSearch(livesearch.value)" placeholder="Более 1000 товаров" #livesearch>
+    <!--><div *ngFor="let live of goods | filter: [currentValue]">
+      <div>
+         {{live.brand}}
       </div>
+   </div>-->
+    <button type="button"><i class="fas fa-search"></i></button>
+  </div>
+  <div class="header_basket">
+    <button (click)="toogle()">Корзина<span class="color_basket">({{cart.length}})</span></button>
+    <div [ngClass]="{'invisible_cart': visibility}" class="cart">
+      <div class="order" *ngFor="let cart of cart; let i = index">
+        <img src={{cart.img_short}} alt="">
+        <h1>{{cart.brand}}</h1>
+        <p><button (click)=cartAmontMinus(i)>-</button> {{cartAmount(i)}}<button (click)=cartAmontPlus(i)>+</button></p>
+        <p>Цена: {{cartSum(i)}}</p>
+        <button (click)="deleteCart(i)">Удалить из корзины</button>
+      </div>
+      <p *ngIf="cart.length > 0">Итого:{{orderSum()}} грн</p>
     </div>
-  </header>
+  </div>
+</header>

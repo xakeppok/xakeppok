@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
-import { configurtaion } from './configurtaion'
+import { configurtaion } from './configurtaion';
+import { IConfiguration } from './interface';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
 
-  config = configurtaion;
+  private config: IConfiguration = configurtaion;
+  public liveSearch: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
   constructor() { }
-  
-  getConfig(){
-    return this.config
+
+  getConfig(): IConfiguration {
+    return this.config;
   }
 }
